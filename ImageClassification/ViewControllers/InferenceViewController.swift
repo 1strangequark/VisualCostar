@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+var univFieldNameArray = [String]()
+var univInfoArray = [String]()
+
 import UIKit
 
 // MARK: InferenceViewControllerDelegate Method Declarations
@@ -96,6 +99,13 @@ class InferenceViewController: UIViewController {
     threadStepper.maximumValue = Double(threadCountLimit)
     threadStepper.minimumValue = Double(minThreadCount)
     threadStepper.value = Double(currentThreadCount)
+    
+    for i in 0...1
+    {
+        let tuple = displayStringsForInferenceInfo(atRow: i)
+        univFieldNameArray.append(tuple.0)
+        univInfoArray.append(tuple.1)
+    }
 
   }
 
