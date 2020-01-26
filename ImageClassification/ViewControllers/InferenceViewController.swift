@@ -12,8 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var univFieldNameArray = [String]()
-var univInfoArray = [String]()
+var univPredictArray = [0.0, 0.0]
+var currentDataIndex = 0
+
+var totalHappy = 0.0;
+var totalSad = 0.0;
+
+var numValuesInAverage = 0;
+
+var determinedEmotion = ""
+
+var beginPressed = false
 
 import UIKit
 
@@ -99,13 +108,6 @@ class InferenceViewController: UIViewController {
     threadStepper.maximumValue = Double(threadCountLimit)
     threadStepper.minimumValue = Double(minThreadCount)
     threadStepper.value = Double(currentThreadCount)
-    
-    for i in 0...1
-    {
-        let tuple = displayStringsForInferenceInfo(atRow: i)
-        univFieldNameArray.append(tuple.0)
-        univInfoArray.append(tuple.1)
-    }
 
   }
 
@@ -211,8 +213,83 @@ extension InferenceViewController: UITableViewDelegate, UITableViewDataSource {
     cell.fieldNameLabel.textColor = color
     cell.fieldNameLabel.text = fieldName
     cell.infoLabel.text = info
+    print(fieldName)
+    print(info)
+    
+    let faceTag = matches(for: "[0-9] happy", in: fieldName)
+    
+    var dataOnly = matches(for: "[0-9]?[0-9].[0-9][0-9]%", in: info)
+
+    if (faceTag.isEmpty == false && !(dataOnly.isEmpty))
+    {
+        var insertString = (dataOnly[0] as String)
+        insertString = String(insertString.dropLast())
+        univPredictArray.remove(at: 0)
+        univPredictArray.insert(Double(insertString)!, at: 0)
+    }
+    else if (!(dataOnly.isEmpty))
+    {
+        var insertString = (dataOnly[0] as String)
+        insertString = String(insertString.dropLast())
+        univPredictArray.remove(at: 1)
+        univPredictArray.insert(Double(insertString)!, at: 1)
+    }
+ 
+     addDataAndCheckIfDone()
+
+        
     return cell
   }
+
+    func addDataAndCheckIfDone() -> Void
+    {
+        if (!(univPredictArray[0] < 1.0 || univPredictArray[1] < 1.0))
+        {
+            totalHappy += univPredictArray[0]
+            totalSad += univPredictArray[1]
+            numValuesInAverage += 1
+        }
+        
+        if (numValuesInAverage >= 10)
+        {
+            let averageHappy = totalHappy / 10.0
+            let averageSad = totalSad / 10.0
+            
+            if(averageHappy > averageSad)
+            {
+                determinedEmotion = "happy"
+            }
+            else
+            {
+                determinedEmotion = "sad"
+            }
+            
+            numValuesInAverage = 0
+            totalHappy = 0
+            totalSad = 0
+            univPredictArray = [0.0, 0.0]
+            currentDataIndex = 0
+            beginPressed = false
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "inspirationScreen") as UIViewController
+            present(nextViewController, animated: true, completion: nil)
+        }
+    }
+    
+    func matches(for regex: String, in text: String) -> [String] {
+
+        do {
+            let regex = try NSRegularExpression(pattern: regex)
+            let results = regex.matches(in: text,
+                                        range: NSRange(text.startIndex..., in: text))
+            return results.map {
+                String(text[Range($0.range, in: text)!])
+            }
+        } catch let error {
+            print("invalid regex: \(error.localizedDescription)")
+            return []
+        }
+    }
 
   // MARK: Format Display of information in the bottom sheet
   /**

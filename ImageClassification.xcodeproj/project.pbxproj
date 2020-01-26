@@ -19,8 +19,9 @@
 		AAE79E952135237A00E7AC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E942135237A00E7AC1F /* ViewController.swift */; };
 		AAE79E9A2135268800E7AC1F /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E982135268800E7AC1F /* PreviewView.swift */; };
 		AAE79E9B2135268800E7AC1F /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E992135268800E7AC1F /* CameraFeedManager.swift */; };
-		AB322C6B23DC3F25006E2576 /* mobilenet_quant_v1_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AB322C6923DC3F25006E2576 /* mobilenet_quant_v1_224.tflite */; };
-		AB322C6C23DC3F25006E2576 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB322C6A23DC3F25006E2576 /* labels.txt */; };
+		ABC1E8D923DE1AB700EE8287 /* inspirationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC1E8D823DE1AB700EE8287 /* inspirationScreen.swift */; };
+		ABC1E8E423DE353200EE8287 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = ABC1E8E223DE353200EE8287 /* labels.txt */; };
+		ABC1E8E523DE353200EE8287 /* mobilenet_quant_v1_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = ABC1E8E323DE353200EE8287 /* mobilenet_quant_v1_224.tflite */; };
 		CC4DDDB2B90B8416710046F4 /* Pods_ImageClassification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA959FDDB4B1B3095C9737CC /* Pods_ImageClassification.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +40,9 @@
 		AAE79E942135237A00E7AC1F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AAE79E982135268800E7AC1F /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		AAE79E992135268800E7AC1F /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
-		AB322C6923DC3F25006E2576 /* mobilenet_quant_v1_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quant_v1_224.tflite; sourceTree = "<group>"; };
-		AB322C6A23DC3F25006E2576 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		ABC1E8D823DE1AB700EE8287 /* inspirationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = inspirationScreen.swift; path = /Users/Jonathan/Documents/VisualCostar/ImageClassification/ViewControllers/inspirationScreen.swift; sourceTree = "<absolute>"; };
+		ABC1E8E223DE353200EE8287 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		ABC1E8E323DE353200EE8287 /* mobilenet_quant_v1_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quant_v1_224.tflite; sourceTree = "<group>"; };
 		B575626C64F9A7FD26AF3507 /* Pods-ImageClassification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageClassification.debug.xcconfig"; path = "Target Support Files/Pods-ImageClassification/Pods-ImageClassification.debug.xcconfig"; sourceTree = "<group>"; };
 		CA959FDDB4B1B3095C9737CC /* Pods_ImageClassification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageClassification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34FA7CF43EBC9B6CA843305 /* Pods-ImageClassification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageClassification.release.xcconfig"; path = "Target Support Files/Pods-ImageClassification/Pods-ImageClassification.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,8 +96,8 @@
 		AA5FEB7A21355CCC00F9BD4B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AB322C6A23DC3F25006E2576 /* labels.txt */,
-				AB322C6923DC3F25006E2576 /* mobilenet_quant_v1_224.tflite */,
+				ABC1E8E223DE353200EE8287 /* labels.txt */,
+				ABC1E8E323DE353200EE8287 /* mobilenet_quant_v1_224.tflite */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +166,7 @@
 		AAE79E932135236700E7AC1F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				ABC1E8D823DE1AB700EE8287 /* inspirationScreen.swift */,
 				AAE79E942135237A00E7AC1F /* ViewController.swift */,
 				AA5B0EE9217E5E300026FF23 /* InferenceViewController.swift */,
 			);
@@ -241,10 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE79E64213521DB00E7AC1F /* LaunchScreen.storyboard in Resources */,
+				ABC1E8E523DE353200EE8287 /* mobilenet_quant_v1_224.tflite in Resources */,
 				AAE79E61213521DB00E7AC1F /* Assets.xcassets in Resources */,
-				AB322C6B23DC3F25006E2576 /* mobilenet_quant_v1_224.tflite in Resources */,
-				AB322C6C23DC3F25006E2576 /* labels.txt in Resources */,
 				AAE79E5F213521DA00E7AC1F /* Main.storyboard in Resources */,
+				ABC1E8E423DE353200EE8287 /* labels.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +306,7 @@
 				AAE79E9B2135268800E7AC1F /* CameraFeedManager.swift in Sources */,
 				AAAB096E218981FA0015A1F2 /* CVPixelBufferExtension.swift in Sources */,
 				AA16E5A22180843800D9E153 /* InfoCell.swift in Sources */,
+				ABC1E8D923DE1AB700EE8287 /* inspirationScreen.swift in Sources */,
 				AABFCBB2213FE0B100C0A67B /* ModelDataHandler.swift in Sources */,
 				AA5B0EEA217E5E300026FF23 /* InferenceViewController.swift in Sources */,
 				AAE79E5A213521DA00E7AC1F /* AppDelegate.swift in Sources */,

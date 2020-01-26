@@ -25,8 +25,11 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var bottomSheetViewBottomSpace: NSLayoutConstraint!
   @IBOutlet weak var bottomSheetStateImageView: UIImageView!
-  // MARK: Constants
-  private let animationDuration = 0.5
+    @IBOutlet weak var beginButton: UIButton!
+    // MARK: Constants
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    private let animationDuration = 0.5
   private let collapseTransitionThreshold: CGFloat = -40.0
   private let expandThransitionThreshold: CGFloat = 40.0
   private let delayBetweenInferencesMs: Double = 1000
@@ -51,7 +54,7 @@ class ViewController: UIViewController {
   // MARK: View Handling Methods
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    activityIndicator.isHidden = true
     guard modelDataHandler != nil else {
       fatalError("Model set up failed")
     }
@@ -118,6 +121,13 @@ class ViewController: UIViewController {
 
     }
   }
+    
+    @IBAction func beginButtonTapped(_ sender: Any) {
+        beginPressed = true
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
+    
 
   @objc func classifyPasteboardImage() {
     guard let image = UIPasteboard.general.images?.first else {

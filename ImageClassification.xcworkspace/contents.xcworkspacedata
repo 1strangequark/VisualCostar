@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Jonathan/Documents/VisualCostar/ImageClassification/ViewControllers/inspirationScreen.swift">
+   </FileRef>
+   <FileRef
       location = "group:ImageClassification.xcodeproj">
    </FileRef>
    <FileRef
