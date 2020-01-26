@@ -234,8 +234,10 @@ extension InferenceViewController: UITableViewDelegate, UITableViewDataSource {
         univPredictArray.remove(at: 1)
         univPredictArray.insert(Double(insertString)!, at: 1)
     }
- 
-     addDataAndCheckIfDone()
+    if(beginPressed == true)
+    {
+        addDataAndCheckIfDone()
+    }
 
         
     return cell
@@ -243,14 +245,14 @@ extension InferenceViewController: UITableViewDelegate, UITableViewDataSource {
 
     func addDataAndCheckIfDone() -> Void
     {
-        if (!(univPredictArray[0] < 1.0 || univPredictArray[1] < 1.0))
+        if (!(univPredictArray[0] == 0.0 || univPredictArray[1] == 0.0))
         {
             totalHappy += univPredictArray[0]
             totalSad += univPredictArray[1]
             numValuesInAverage += 1
         }
         
-        if (numValuesInAverage >= 10)
+        if (numValuesInAverage >= 30)
         {
             let averageHappy = totalHappy / 10.0
             let averageSad = totalSad / 10.0

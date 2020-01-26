@@ -12,16 +12,19 @@ let sadInpiration = ["why the long face? ur doing amazing sweetie", "blue as a s
 
 class inspirationScreen: UIViewController {
     @IBOutlet weak var inspirationText: UILabel!
+    @IBOutlet weak var moodText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if determinedEmotion == "happy"
         {
             inspirationText.text = happyInpiration.randomElement()
+            moodText.text = "You seem really happy today!"
         }
         else if determinedEmotion == "sad"
         {
             inspirationText.text = sadInpiration.randomElement()
+            moodText.text = "Looking kind of sad today..."
         }
         
         // Do any additional setup after loading the view.

@@ -20,8 +20,8 @@
 		AAE79E9A2135268800E7AC1F /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E982135268800E7AC1F /* PreviewView.swift */; };
 		AAE79E9B2135268800E7AC1F /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE79E992135268800E7AC1F /* CameraFeedManager.swift */; };
 		ABC1E8D923DE1AB700EE8287 /* inspirationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC1E8D823DE1AB700EE8287 /* inspirationScreen.swift */; };
-		ABC1E8E423DE353200EE8287 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = ABC1E8E223DE353200EE8287 /* labels.txt */; };
-		ABC1E8E523DE353200EE8287 /* mobilenet_quant_v1_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = ABC1E8E323DE353200EE8287 /* mobilenet_quant_v1_224.tflite */; };
+		ABC1E8F423DE434900EE8287 /* mobilenet_quant_v1_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = ABC1E8F223DE434900EE8287 /* mobilenet_quant_v1_224.tflite */; };
+		ABC1E8F523DE434900EE8287 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = ABC1E8F323DE434900EE8287 /* labels.txt */; };
 		CC4DDDB2B90B8416710046F4 /* Pods_ImageClassification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA959FDDB4B1B3095C9737CC /* Pods_ImageClassification.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		AA5B0EEB217E70000026FF23 /* CurvedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurvedView.swift; sourceTree = "<group>"; };
 		AAAB096D218981FA0015A1F2 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
 		AABFCBB1213FE0B100C0A67B /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
-		AAE79E56213521DA00E7AC1F /* ImageClassification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageClassification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE79E56213521DA00E7AC1F /* QwerStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QwerStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE79E59213521DA00E7AC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAE79E5E213521DA00E7AC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAE79E60213521DB00E7AC1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 		AAE79E982135268800E7AC1F /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		AAE79E992135268800E7AC1F /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
 		ABC1E8D823DE1AB700EE8287 /* inspirationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = inspirationScreen.swift; path = /Users/Jonathan/Documents/VisualCostar/ImageClassification/ViewControllers/inspirationScreen.swift; sourceTree = "<absolute>"; };
-		ABC1E8E223DE353200EE8287 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
-		ABC1E8E323DE353200EE8287 /* mobilenet_quant_v1_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quant_v1_224.tflite; sourceTree = "<group>"; };
+		ABC1E8F223DE434900EE8287 /* mobilenet_quant_v1_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quant_v1_224.tflite; sourceTree = "<group>"; };
+		ABC1E8F323DE434900EE8287 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
 		B575626C64F9A7FD26AF3507 /* Pods-ImageClassification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageClassification.debug.xcconfig"; path = "Target Support Files/Pods-ImageClassification/Pods-ImageClassification.debug.xcconfig"; sourceTree = "<group>"; };
 		CA959FDDB4B1B3095C9737CC /* Pods_ImageClassification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageClassification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34FA7CF43EBC9B6CA843305 /* Pods-ImageClassification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageClassification.release.xcconfig"; path = "Target Support Files/Pods-ImageClassification/Pods-ImageClassification.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 		AA5FEB7A21355CCC00F9BD4B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ABC1E8E223DE353200EE8287 /* labels.txt */,
-				ABC1E8E323DE353200EE8287 /* mobilenet_quant_v1_224.tflite */,
+				ABC1E8F323DE434900EE8287 /* labels.txt */,
+				ABC1E8F223DE434900EE8287 /* mobilenet_quant_v1_224.tflite */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 		AAE79E57213521DA00E7AC1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAE79E56213521DA00E7AC1F /* ImageClassification.app */,
+				AAE79E56213521DA00E7AC1F /* QwerStar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			);
 			name = ImageClassification;
 			productName = ImageClassification;
-			productReference = AAE79E56213521DA00E7AC1F /* ImageClassification.app */;
+			productReference = AAE79E56213521DA00E7AC1F /* QwerStar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -244,10 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE79E64213521DB00E7AC1F /* LaunchScreen.storyboard in Resources */,
-				ABC1E8E523DE353200EE8287 /* mobilenet_quant_v1_224.tflite in Resources */,
 				AAE79E61213521DB00E7AC1F /* Assets.xcassets in Resources */,
+				ABC1E8F523DE434900EE8287 /* labels.txt in Resources */,
 				AAE79E5F213521DA00E7AC1F /* Main.storyboard in Resources */,
-				ABC1E8E423DE353200EE8287 /* labels.txt in Resources */,
+				ABC1E8F423DE434900EE8287 /* mobilenet_quant_v1_224.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +470,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.ImageClassification;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QwerStar;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -497,7 +497,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tensorflow.ImageClassification;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QwerStar;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
