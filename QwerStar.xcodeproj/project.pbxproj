@@ -185,9 +185,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AAE79E55213521DA00E7AC1F /* ImageClassification */ = {
+		AAE79E55213521DA00E7AC1F /* QwerStar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAE79E7E213521DB00E7AC1F /* Build configuration list for PBXNativeTarget "ImageClassification" */;
+			buildConfigurationList = AAE79E7E213521DB00E7AC1F /* Build configuration list for PBXNativeTarget "QwerStar" */;
 			buildPhases = (
 				24C64659E85C06DE0639571D /* [CP] Check Pods Manifest.lock */,
 				AA055D8B2162320A00B25948 /* ShellScript */,
@@ -199,7 +199,7 @@
 			);
 			dependencies = (
 			);
-			name = ImageClassification;
+			name = QwerStar;
 			productName = ImageClassification;
 			productReference = AAE79E56213521DA00E7AC1F /* QwerStar.app */;
 			productType = "com.apple.product-type.application";
@@ -220,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AAE79E51213521DA00E7AC1F /* Build configuration list for PBXProject "ImageClassification" */;
+			buildConfigurationList = AAE79E51213521DA00E7AC1F /* Build configuration list for PBXProject "QwerStar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -233,7 +233,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AAE79E55213521DA00E7AC1F /* ImageClassification */,
+				AAE79E55213521DA00E7AC1F /* QwerStar */,
 			);
 		};
 /* End PBXProject section */
@@ -507,7 +507,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AAE79E51213521DA00E7AC1F /* Build configuration list for PBXProject "ImageClassification" */ = {
+		AAE79E51213521DA00E7AC1F /* Build configuration list for PBXProject "QwerStar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAE79E7C213521DB00E7AC1F /* Debug */,
@@ -516,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAE79E7E213521DB00E7AC1F /* Build configuration list for PBXNativeTarget "ImageClassification" */ = {
+		AAE79E7E213521DB00E7AC1F /* Build configuration list for PBXNativeTarget "QwerStar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAE79E7F213521DB00E7AC1F /* Debug */,
